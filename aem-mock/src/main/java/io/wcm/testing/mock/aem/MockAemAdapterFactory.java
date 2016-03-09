@@ -56,21 +56,21 @@ public class MockAemAdapterFactory implements AdapterFactory {
 
   @Property(name = AdapterFactory.ADAPTABLE_CLASSES)
   private static final String[] ADAPTABLES = {
-    Resource.class.getName(),
-    ResourceResolver.class.getName()
+      Resource.class.getName(),
+      ResourceResolver.class.getName()
   };
 
   @Property(name = AdapterFactory.ADAPTER_CLASSES)
   private static final String[] ADAPTERS = {
-    Page.class.getName(),
-    Template.class.getName(),
-    Asset.class.getName(),
-    Rendition.class.getName(),
-    PageManager.class.getName(),
-    ComponentManager.class.getName(),
-    TagManager.class.getName(),
-    Tag.class.getName(),
-    Designer.class.getName(),
+      Page.class.getName(),
+      Template.class.getName(),
+      Asset.class.getName(),
+      Rendition.class.getName(),
+      PageManager.class.getName(),
+      ComponentManager.class.getName(),
+      TagManager.class.getName(),
+      Tag.class.getName(),
+      Designer.class.getName(),
   };
 
   @Override
@@ -116,7 +116,7 @@ public class MockAemAdapterFactory implements AdapterFactory {
       return (AdapterType)new MockTagManager(resolver);
     }
     if (type == Designer.class) {
-      return (AdapterType)new MockDesigner();
+      return (AdapterType)new MockDesigner(resolver);
     }
     return null;
   }
