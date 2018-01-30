@@ -63,7 +63,7 @@ class MockTagManager implements TagManager {
   private static final String TAG_RESOURCE_TYPE = "cq/tagging/components/tag";
 
   /** Root location in the JCR where tags lie */
-  static final String TAGS_ROOT = "/etc/tags";
+  static final String TAGS_ROOT = "/content/cq:tags";
 
   private final ResourceResolver resourceResolver;
   private final Logger log;
